@@ -1,3 +1,2 @@
 # GenshinBotCM
-A QQ &amp; genshin bot base on ColorMirai
-https://github.com/Coloryr/ColorMirai
+A genshin impact bot base on [ColorMirai](https://github.com/Coloryr/ColorMirai)
