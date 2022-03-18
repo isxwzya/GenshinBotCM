@@ -10,19 +10,16 @@ import io.github.isxwzya.GenshinBotCM.sdk.pack.re.FriendInfoPack;
 import io.github.isxwzya.GenshinBotCM.sdk.pack.to.GroupMessageEventPack;
 import io.github.isxwzya.GenshinBotCM.sdk.pack.to.NewFriendRequestEventPack;
 
+import io.github.isxwzya.GenshinBotCM.src.LuckToday.LuckToday;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
 public class Test {
     private static TopRobot robot;
 
     private static void message(byte type, PackBase data) {
         switch (type) {
-            case 46: {
-                NewFriendRequestEventPack pack = (NewFriendRequestEventPack) data;
-                robot.newFriendRequestCall(pack.qq, pack.eventid, FriendCallType.ACCEPT);
-                break;
-            }
             case 49:
                 GroupMessageEventPack pack = (GroupMessageEventPack) data;
                 System.out.println("id = " + pack.id);
@@ -47,17 +44,15 @@ public class Test {
         System.out.println("机器人状态:" + type.toString());
     }
 
-    public static void main(String[] arg) {
+
+
         robot = new TopRobot();
         RobotConfig Config = new RobotConfig() {{
             name = "Demo";
             ip = "127.0.0.1";
             port = 23333;
             pack = new ArrayList<Integer>() {{
-                this.add(46);
                 this.add(49);
-                this.add(50);
-                this.add(51);
             }};
             groups = null;
             qqs = null;
@@ -73,7 +68,7 @@ public class Test {
         robot.start();
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            String data = scanner.nextLine();
+/*            String data = scanner.nextLine();
             String[] args = data.split(" ");
             if (args[0].equals("stop")) {
                 robot.stop();
@@ -95,6 +90,15 @@ public class Test {
                     System.out.println("错误的参数");
                 }
             }
-        }
+            String data = scanner.nextLine();
+            String[] args = data.split(" ");
+            if (args[0].equals(".jrrp")){
+                LuckToday luckToday = new LuckToday();
+                int jrrp= luckToday.getRandomInt(1);
+            }
+        }*/
+public class Test{
+        public static void main(String[] arg) {
+        LuckToday.loadLuckToday();
     }
 }
